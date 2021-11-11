@@ -10,5 +10,5 @@ basic.showString("Voting Machine")
 radio.setGroup(4)
 radio.setTransmitSerialNumber(true)
 basic.forever(function () {
-	
+    radio.sendValue("name", radio.receivedPacket(RadioPacketProperty.SerialNumber))
 })
